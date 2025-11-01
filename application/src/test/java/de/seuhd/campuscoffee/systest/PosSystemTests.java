@@ -59,7 +59,7 @@ public class PosSystemTests extends AbstractSysTest {
         Pos posToUpdate = createdPosList.getFirst();
 
         // Update fields
-        posToUpdate.setName(posToUpdate.getName() + " (Updated)");
+        posToUpdate.setName("THIS STRING BREAKS THE TEST");
         posToUpdate.setDescription("Updated description");
 
         Pos updatedPos = posDtoMapper.toDomain(TestUtils.updatePos(List.of(posDtoMapper.fromDomain(posToUpdate))).getFirst());
